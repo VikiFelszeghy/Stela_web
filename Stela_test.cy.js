@@ -9,7 +9,7 @@ describe("Test of Stela website", () => {
         cy.visit("https://vikifelszeghy.github.io/Stela_web/")
     })
 
-    it("Check title, h1 and picture", () => {
+    it("Verify title, h1 and picture", () => {
         cy.log("Title is correct")
         cy.title().should("eq", "Stela")
 
@@ -26,7 +26,7 @@ describe("Test of Stela website", () => {
         cy.get("[data-test=bookLink]").and("have.prop", "href", "https://www.martinus.sk/?uItem=40973").and("have.prop", "target", "_blank")
     })
 
-    it("Check functionality of the button Daj Stele pamlsok", () => {
+    it("Verify functionality of the button Daj Stele pamlsok", () => {
         cy.log("Verify the button Daj Stele pamlsok")
         cy.get("#treatButton").should("have.text", "Daj Stele pamlsok")
     })
